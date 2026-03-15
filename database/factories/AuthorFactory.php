@@ -18,7 +18,9 @@ class AuthorFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'biography' => fake()->paragraph(),
+            'birthdate' => fake()->dateTimeBetween('-80 years', '-20 years'),
         ];
     }
 }
